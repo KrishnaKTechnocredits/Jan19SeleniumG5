@@ -25,7 +25,9 @@ public class Init {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + File.separator + "resources" + File.separator + "chromedriver");
 		} else {
-			System.setProperty("webdriver.driver.chromedriver", ConstantPath.CHROME_EXE_PATH);
+			System.out.println("Before chrome driver path");
+			System.setProperty("webdriver.chrome.driver", ConstantPath.CHROME_EXE_PATH);
+			System.out.println("After chrome driver path");
 		}
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
